@@ -1,0 +1,51 @@
+{% set name = "oblivious" %}
+{% set version = "7.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oblivious-{{ version }}.tar.gz
+  sha256: 0f9a0517e059c9a5f3a54c1313761603bbfa34d5aa15b1a258437d4833d24b60
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  skip: True  # [py<38]
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - wheel
+    - pip
+  run:
+    - python
+    - parts >=1.6
+    - fe25519 >=1.4
+    - ge25519 >=1.4
+    - bn254 >=0.1
+
+test:
+  imports:
+    - oblivious
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/nthparty/oblivious
+  summary: Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  description: |
+    Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
+  doc-url: https://github.com/nthparty/oblivious/blob/main/README.rst
+  dev_url: https://github.com/nthparty/oblivious
+
+extra:
+  recipe-maintainers:
+    - Arishamays1
