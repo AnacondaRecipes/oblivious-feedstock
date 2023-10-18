@@ -32,7 +32,7 @@ test:
     - oblivious
   commands:
     - pip check
-    - pytest test
+    - pytest tests
   requires:
     - pip
     - fountains
