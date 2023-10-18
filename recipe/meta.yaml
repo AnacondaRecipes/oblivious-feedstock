@@ -37,6 +37,7 @@ test:
     - pip
     - fountains
     - bitlist
+    - pytest
 
 about:
   home: https://github.com/nthparty/oblivious
@@ -46,7 +47,7 @@ about:
   license_file: LICENSE
   description: |
     Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
-  doc-url: https://github.com/nthparty/oblivious/blob/main/README.rst
+  doc_url: https://github.com/nthparty/oblivious/blob/main/README.rst
   dev_url: https://github.com/nthparty/oblivious
 
 extra:
