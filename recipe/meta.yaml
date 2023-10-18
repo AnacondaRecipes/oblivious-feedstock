@@ -30,6 +30,8 @@ requirements:
 test:
   imports:
     - oblivious
+  source_files:
+    - tests
   commands:
     - pip check
     - pytest tests
