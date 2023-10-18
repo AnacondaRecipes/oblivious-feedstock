@@ -35,6 +35,7 @@ test:
   commands:
     - pip check
     - pytest test
+    - pytest -k "not ({{ test_ristretto.py }})"
   requires:
     - pip
     - fountains
