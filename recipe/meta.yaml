@@ -32,8 +32,11 @@ test:
     - oblivious
   commands:
     - pip check
+    - pytest test
   requires:
     - pip
+    - fountains
+    - bitlist
 
 about:
   home: https://github.com/nthparty/oblivious
