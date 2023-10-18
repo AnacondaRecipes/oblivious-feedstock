@@ -31,7 +31,7 @@ test:
   imports:
     - oblivious
   source_files:
-    - tests
+    - test
   commands:
     - pip check
     - pytest tests
