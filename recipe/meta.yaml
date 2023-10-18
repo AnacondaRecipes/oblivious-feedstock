@@ -39,7 +39,7 @@ test:
     - pip
     - fountains
     - bitlist
-    - pytests
+    - pytest
 
 about:
   home: https://github.com/nthparty/oblivious
