@@ -17,11 +17,13 @@ build:
 requirements:
   host:
     - python
+    - libsodium 1.0.18
     - setuptools
     - wheel
     - pip
   run:
     - python
+    - libsodium >=1.0.18,<1.0.19.0a0
     - parts >=1.6
     - fe25519 >=1.4
     - ge25519 >=1.4
@@ -32,21 +34,21 @@ test:
     - oblivious
   source_files:
     - test
-  commands:
-    - pip check
-    - pytest test
   requires:
     - pip
     - fountains
     - bitlist
     - pytest
+  commands:
+    - pip check
+    - pytest test -v
 
 about:
   home: https://github.com/nthparty/oblivious
-  summary: Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
   license: MIT
   license_family: MIT
   license_file: LICENSE
+  summary: Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
   description: |
     Python library that serves as an API for common cryptographic primitives used to implement OPRF, OT, and PSI protocols.
   doc_url: https://github.com/nthparty/oblivious/blob/main/README.rst
